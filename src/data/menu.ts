@@ -1,0 +1,182 @@
+export interface MenuItem {
+  id: string;
+  title: string;
+  category: "all" | "featured" | "breakfast" | "dinner" | "dessert" | "lunch";
+  categoryLabel: string;
+  description: string;
+  price: string;
+  numericPrice: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  isSpecial?: boolean;
+}
+
+export const menuCategories = [
+  { id: "all", label: "ALL MENU" },
+  { id: "featured", label: "FEATURED RECIPES" },
+  { id: "breakfast", label: "BREAKFAST" },
+  { id: "dinner", label: "DINNER" },
+  { id: "dessert", label: "DESSERT" },
+  { id: "lunch", label: "LUNCH" },
+] as const;
+
+export const menuItems: MenuItem[] = [
+  {
+    id: "matcha-cheesecake",
+    title: "MATCHA CHEESECAKE",
+    category: "dessert",
+    categoryLabel: "DESSERT",
+    description: "Velvety Uji green tea cheesecake layered on roasted sesame crust with subtle sweetness.",
+    price: "$9.50",
+    numericPrice: 9.5,
+    rating: 4.8,
+    reviews: 40,
+    image: "https://framerusercontent.com/images/s8xK0vRe71tAEzq6y6m5EtIxI0M.png?width=896&height=1200",
+    isSpecial: true,
+  },
+  {
+    id: "miso-ramen",
+    title: "MISO RAMEN",
+    category: "dinner",
+    categoryLabel: "DINNER",
+    description: "Rich 18-hour simmered pork bone broth blended with fermented red miso and handmade noodles.",
+    price: "$14.25",
+    numericPrice: 14.25,
+    rating: 5.0,
+    reviews: 65,
+    image: "https://framerusercontent.com/images/I5NWvJ7BeWs96DTPDt0Q7OkOM.png?width=680&height=744",
+    isSpecial: true,
+  },
+  {
+    id: "teriyaki-salmon",
+    title: "TERIYAKI SALMON",
+    category: "featured",
+    categoryLabel: "FEATURED RECIPES",
+    description: "Pan-seared Atlantic salmon coated in artisan mirin soy reduction with pickled ginger stems.",
+    price: "$20.00",
+    numericPrice: 20.0,
+    rating: 4.9,
+    reviews: 80,
+    image: "https://framerusercontent.com/images/7oWzyhB2iqbxxlTHcJfsVaAP4.png?width=1200&height=673",
+    isSpecial: true,
+  },
+  {
+    id: "dragon-maki",
+    title: "DRAGON MAKI",
+    category: "lunch",
+    categoryLabel: "LUNCH",
+    description: "Crispy tempura prawn roll blanketed with sliced avocado, tobiko, and unagi sweet glaze.",
+    price: "$16.75",
+    numericPrice: 16.75,
+    rating: 4.7,
+    reviews: 90,
+    image: "https://framerusercontent.com/images/julKMWPzXjF5ycHQTa3Sf2UJnoM.png?width=1200&height=1200",
+  },
+  {
+    id: "spicy-tuna-nigiri",
+    title: "SPICY TUNA NIGIRI",
+    category: "lunch",
+    categoryLabel: "LUNCH",
+    description: "Prime yellowfin tuna minced with sriracha sesame sauce atop warm seasoned sushi rice.",
+    price: "$12.50",
+    numericPrice: 12.5,
+    rating: 5.0,
+    reviews: 100,
+    image: "https://framerusercontent.com/images/VTaFoCROcpcfqehRktqLGhx3TzA.png?width=1200&height=1200",
+    isSpecial: true,
+  },
+  {
+    id: "signature-sushi-roll",
+    title: "SIGNATURE SUSHI ROLL",
+    category: "featured",
+    categoryLabel: "FEATURED RECIPES",
+    description: "Fresh king crab, scorched scallop, and truffle oil topped with microgreens and gold leaf.",
+    price: "$18.99",
+    numericPrice: 18.99,
+    rating: 5.0,
+    reviews: 35,
+    image: "https://framerusercontent.com/images/Rd6kfeNwszWoTu6G1RRETj4WOSY.png?width=1200&height=800",
+  },
+  {
+    id: "miso-butter-chicken",
+    title: "MISO BUTTER CHICKEN",
+    category: "dinner",
+    categoryLabel: "DINNER",
+    description: "Crisp-skin organic chicken thighs simmered gently in shiro miso and cultured brown butter.",
+    price: "$12.00",
+    numericPrice: 12.0,
+    rating: 4.8,
+    reviews: 65,
+    image: "https://framerusercontent.com/images/u1HVvY08Bh0HTLYVgb3C2nu820k.png?width=673&height=695",
+  },
+  {
+    id: "garlic-butter",
+    title: "GARLIC BUTTER PRAWNS",
+    category: "dinner",
+    categoryLabel: "DINNER",
+    description: "Wild tiger prawns sautéed in garlic-infused Hokkaido butter with fresh scallions.",
+    price: "$16.00",
+    numericPrice: 16.0,
+    rating: 5.0,
+    reviews: 23,
+    image: "https://framerusercontent.com/images/eClrGLdRe0s71C6W4GdBopEOg.png?width=904&height=1200",
+    isSpecial: true,
+  },
+  {
+    id: "sakura-mocktail",
+    title: "SAKURA MOCKTAIL",
+    category: "breakfast",
+    categoryLabel: "BREAKFAST",
+    description: "Sparkling cherry blossom nectar with fresh white peach purée, lychee, and fresh mint.",
+    price: "$14.00",
+    numericPrice: 14.0,
+    rating: 4.8,
+    reviews: 50,
+    image: "https://framerusercontent.com/images/P2r2VtVipVbIVHw2j1uL7JoNWzw.png?width=1200&height=960",
+  },
+  {
+    id: "grilled-lamb-chops",
+    title: "GRILLED LAMB CHOPS",
+    category: "dinner",
+    categoryLabel: "DINNER",
+    description: "Charcoal-grilled rosemary lamb cutlets paired with spiced shiso chimichurri sauce.",
+    price: "$13.00",
+    numericPrice: 13.0,
+    rating: 4.8,
+    reviews: 40,
+    image: "https://framerusercontent.com/images/EbckMY97SZXnxyH9EzyfFBGI8.png?width=1200&height=923",
+  },
+  {
+    id: "tiramisu-fusion",
+    title: "TIRAMISU FUSION",
+    category: "dessert",
+    categoryLabel: "DESSERT",
+    description: "Espresso ladyfingers infused with Japanese whisky cream and cocoa dust.",
+    price: "$15.00",
+    numericPrice: 15.0,
+    rating: 4.8,
+    reviews: 40,
+    image: "https://framerusercontent.com/images/biUNrHP0nyH4RGBcl10HyqwHc.png?width=1200&height=904",
+  },
+  {
+    id: "crispy-tempura-bites",
+    title: "CRISPY TEMPURA BITES",
+    category: "breakfast",
+    categoryLabel: "BREAKFAST",
+    description: "Seasonal lotus root, sweet kabocha squash, and tiger prawns in featherlight batter.",
+    price: "$11.50",
+    numericPrice: 11.5,
+    rating: 4.9,
+    reviews: 45,
+    image: "https://framerusercontent.com/images/FCepXoQGqP3rErCow31TyL3VmY8.png?width=406&height=424",
+  },
+];
+
+export const specialMenuHighlights = [
+  { number: "1", title: "CRISPY TEMPURA BITES", tag: "POPULAR" },
+  { number: "2", title: "SPICY TUNA TARTARE", tag: "CHEF SPECIAL" },
+  { number: "3", title: "TRUFFLE MUSHROOM SOUP", tag: "SEASONAL" },
+  { number: "4", title: "EDAMAME WITH SEA SALT", tag: "ORGANIC" },
+];
+
